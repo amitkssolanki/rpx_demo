@@ -65,4 +65,4 @@ end
 # Include your application configuration below
 BASE_URL = 'https://rpxnow.com'
 API_KEY =  'd84d27f04b3125136255f459a21cfc1b196c57c6'
-REALM = 'localhost'
+REALM = 'solanki'
