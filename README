@@ -1,0 +1,28 @@
+
+Ruby on Rails RPX Demo Application
+==================================
+
+This is a small Ruby on Rails application which demonstrates how one
+might integrate a Rails application with the RPX service by JanRain,
+Inc.
+
+To set up the demo:
+
+ (1) Install Rails 2.2.2
+
+ (2) Install the sqlite3-ruby gem
+
+ (3) Run rake db:migrate
+
+ (4) Go to http://rpxnow.com/ and create an RP
+
+ (5) In config/environment.rb, set these parameters according to the
+     RPX RP configuration that you set up in (4):
+
+     * API_KEY
+     * REALM
+
+ (6) Run script/server
+
+ (7) Nagivate to the appropriate host and port with your browser and
+     try it out.

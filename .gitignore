@@ -1,0 +1,10 @@
+log/*.log
+log/*.pid
+tmp/**/*
+tmp/.*
+.DS_Store
+db/schema.rb
+config/database.yml
+coverage/
+config/development.sphinx.conf
+db/sphinx/

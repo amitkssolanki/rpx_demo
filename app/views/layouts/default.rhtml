@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/ DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>RPX RoR Demo <% if @page_title %> - <%= @page_title %><% end %>
+    </title>
+    <style type="text/css">
+      body {
+        font-family: verdana, sans-serif;
+      }
+      #doc {
+        max-width: 40em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #hd {
+        margin-bottom: 1em;
+      }
+      #hd h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 4px;
+        border-bottom: 2px solid black;
+      }
+      #hd a {
+        text-decoration: none;
+      }
+      #hd a:hover {
+        text-decoration: underline;
+      }
+      #hd div {
+        background-color: #eee;
+        font-size: smaller;
+        margin-bottom: 0em;
+        padding: 4px;
+      }
+      .section h2 {
+        font-size: 120%;
+        padding: 4px;
+        margin-top: 0;
+        margin-bottom: 0;
+        background: #eee;
+        border-bottom: 1px solid #aaa;
+      }
+      .section {
+        margin-top: 2em;
+        border: 1px solid #aaa;
+      }
+      .section div {
+        padding: 4px;
+        margin-top: 0;
+      }
+      #rpx-button {
+        font-size: 120%;
+      }
+      #rpx-button span {
+        font-size: 60%;
+      }
+      .section th {
+        text-align: right;
+        width: 16em;
+      }
+      .section input[type=submit] {
+        margin-left: 16.5em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="doc">
+      <div id="hd">
+	<h1>
+	  <%= link_to "RPX RoR Demo", :controller => "site", :action => "index" %>
+	</h1>
+	<div>
+	  This site is a very simple RPX relying party demo. It has a
+	  user accounts that support authentication using RPX. It also
+	  supports legacy (username/password) authentication in order
+	  to demonstrate the integration of those two systems.
+	</div>
+      </div>
+    <% if @page_title %><h2><%=@page_title%></h2><%end%>
+<% if flash[:error] %>
+    <p style="color:red; font-weight:bold;"><%= h flash[:error] %></p>
+<% end %>
+<% if flash[:notice] %>
+    <p style="color:blue; font-weight:bold;"><%= h flash[:notice] %></p>
+<% end %>
+    <%= @content_for_layout %>
+    </div>
+  </body>
+</html>
